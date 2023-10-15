@@ -15,7 +15,7 @@ type IInput = {
   validation?: object;
   label?: string;
 };
-
+// husky test
 const FormInput = ({ name, type, size, value, id, placeholder, validation, label }: IInput) => {
   const { control } = useFormContext();
 
@@ -44,3 +44,4 @@ const FormInput = ({ name, type, size, value, id, placeholder, validation, label
 };
 
 export default FormInput;
+                           
