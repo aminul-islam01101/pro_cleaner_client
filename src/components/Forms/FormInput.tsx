@@ -44,4 +44,3 @@ const FormInput = ({ name, type, size, value, id, placeholder, validation, label
 };
 
 export default FormInput;
-                           

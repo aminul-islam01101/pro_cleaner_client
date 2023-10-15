@@ -42,6 +42,9 @@
     "import/newline-after-import": ["warn", { "count": 1 }],
     "import/order": ["error", {"newlines-between": "always"}],
     "no-undef": "error",
+    "@typescript-eslint/no-unused-vars":"warn",
+    "@typescript-eslint/no-explicit-any":"warn",
+    "@typescript-eslint/no-misused-promises":"warn",
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -66,14 +69,7 @@
     "consistent-return": 0,
 
     "react/function-component-definition":[2, { "namedComponents": ["arrow-function","function-expression","function-declaration" ] }],
-    "@typescript-eslint/no-misused-promises": [
-      "error",
-      {
-        "checksVoidReturn": false,
-        "methods": ["get", "post", "put", "delete"],
-        "excludedReplacements": []
-      }
-    ],
+  
     "radix": ["error", "as-needed"],
     "spaced-comment": [
       "error",

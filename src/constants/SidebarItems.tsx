@@ -12,7 +12,10 @@ import Link from 'next/link';
 
 import { ROLE } from './role';
 
-export const sidebarItems = (role: string) => {
+
+
+
+export const sidebarItems = (role: ROLE) => {
   const defaultSidebarItems: MenuProps['items'] = [
     {
       label: 'Profile',
@@ -182,9 +185,15 @@ export const sidebarItems = (role: string) => {
     },
   ];
 
-  if (role === ROLE.SUPER_ADMIN) return superAdminSidebarItems;
-  if (role === ROLE.ADMIN) return adminSidebarItems;
-  if (role === ROLE.USER) return studentSidebarItems;
+  if (role === ROLE.SUPER_ADMIN) {
+    return superAdminSidebarItems;
+  }
+  if (role === ROLE.ADMIN) {
+    return adminSidebarItems;
+  }
+  if (role === ROLE.USER) {
+    return studentSidebarItems;
+  }
 
   return defaultSidebarItems;
 };
