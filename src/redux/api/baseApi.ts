@@ -1,4 +1,4 @@
-import { createApi,  } from '@reduxjs/toolkit/query/react';
+import { createApi } from '@reduxjs/toolkit/query/react';
 
 import { gerBaseUrl } from '@/helpers/configs/envConfigs';
 import { axiosBaseQuery } from '@/helpers/axios/axiosBaseQuery';

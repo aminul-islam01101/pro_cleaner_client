@@ -144,8 +144,6 @@ export const sidebarItems = (role: ROLE) => {
     },
   ];
 
-
-
   const userSidebarItem: MenuProps['items'] = [
     ...defaultSidebarItems,
     {

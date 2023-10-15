@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 'use client';
@@ -11,19 +12,22 @@ import loginImage from '../../assets/login-image.png';
 import Form from '@/components/Forms/Form';
 import FormInput from '@/components/Forms/FormInput';
 import { useSigninMutation } from '@/redux/slices/auth/authApiSlice';
+import { getUserInfo, storeUserInfo } from '@/services/auth.services';
 import { FormValues } from '@/types/formTypes';
 
 const LoginPage = () => {
+  const user =getUserInfo ()
+  console.log('🌼 🔥🔥 file: page.tsx:19 🔥🔥 LoginPage 🔥🔥 user🌼', user);
+
   const [signin] = useSigninMutation();
   const onSubmit: SubmitHandler<FormValues> = async (data: FormValues) => {
     try {
       const res = await signin({ ...data }).unwrap();
-      console.log(
-        '🌼 🔥🔥 file: page.tsx:20 🔥🔥 constonSubmit:SubmitHandler<FormValues>= 🔥🔥 res🌼',
-        res
-      );
+      console.log('🌼 🔥🔥 file: page.tsx:25 🔥🔥 constonSubmit:SubmitHandler<FormValues>= 🔥🔥 res🌼', res);
+
+      storeUserInfo({ accessToken: res?.data.accessToken });
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   };
   return (

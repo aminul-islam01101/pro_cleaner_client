@@ -1,7 +1,6 @@
 import { baseApi } from '@/redux/api/baseApi';
 import { FormValues } from '@/types/formTypes';
 
-
 const AUTH_URL = '/auth';
 export const authApi = baseApi.injectEndpoints({
   endpoints: (build) => ({

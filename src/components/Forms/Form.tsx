@@ -1,3 +1,5 @@
+/* eslint-disable react/require-default-props */
+
 'use client';
 
 import { ReactElement, ReactNode } from 'react';
@@ -11,7 +13,7 @@ type FormProps = {
   children?: ReactElement | ReactNode;
   submitHandler: SubmitHandler<any>;
 } & FormConfig;
-// onSubmit={handleSubmit(onSubmit)} 
+// onSubmit={handleSubmit(onSubmit)}
 const Form = ({ children, submitHandler, defaultValues }: FormProps) => {
   const formConfig: FormConfig = {};
 
@@ -32,8 +34,8 @@ const Form = ({ children, submitHandler, defaultValues }: FormProps) => {
     </FormProvider>
   );
 };
-Form.defaultProps = {
-  defaultValues: {},
-  children: null,
-};
+// Form.defaultProps = {
+//   defaultValues: {},
+//   children: null,
+// };
 export default Form;

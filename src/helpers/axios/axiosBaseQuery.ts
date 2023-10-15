@@ -6,7 +6,6 @@ import { axiosInstance } from './axiosInstance';
 
 import { TMeta } from '@/types';
 
-
 export const axiosBaseQuery =
   (
     { baseUrl }: { baseUrl: string } = { baseUrl: '' }
@@ -33,7 +32,7 @@ export const axiosBaseQuery =
         headers: {
           'Content-Type': contentType || 'application/json',
         },
-        withCredentials:true
+        withCredentials: true,
       });
       return { data: result.data };
     } catch (axiosError) {
