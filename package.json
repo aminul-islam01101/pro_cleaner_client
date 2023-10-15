@@ -24,6 +24,7 @@
     "@ant-design/icons": "^5.2.6",
     "@reduxjs/toolkit": "^1.9.7",
     "antd": "^5.10.0",
+    "axios": "^1.5.1",
     "next": "13.5.4",
     "rc-slider": "^10.3.0",
     "react": "^18",

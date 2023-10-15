@@ -11,7 +11,7 @@ const { Sider } = Layout;
 const SideBar = () => {
   const [collapsed, setCollapsed] = useState(false);
 
-  const role = ROLE.ADMIN;
+  const role = ROLE.USER;
 
   return (
     <Sider
@@ -37,7 +37,7 @@ const SideBar = () => {
           marginBottom: '1rem',
         }}
       >
-        PH-University
+        Pro-cleaner
       </div>
       <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={sidebarItems(role)} />
     </Sider>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable react/require-default-props */
 
 'use client';
@@ -32,10 +33,16 @@ const FormInput = ({ name, type, size, value, id, placeholder, validation, label
               size={size}
               placeholder={placeholder}
               {...field}
-              value={value}
+              value={value || field.value}
             />
           ) : (
-            <Input type={type} size={size} placeholder={placeholder} {...field} value={value} />
+            <Input
+              type={type}
+              size={size}
+              placeholder={placeholder}
+              {...field}
+              value={value || field.value}
+            />
           )
         }
       />
