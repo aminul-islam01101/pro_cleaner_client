@@ -1,3 +1,4 @@
+
 {
   "env": {
     "browser": true,
@@ -9,9 +10,17 @@
     "next/core-web-vitals",
     "airbnb",
     "airbnb-typescript",
+    "airbnb/hooks",
+    "eslint:recommended",
 
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/typescript",
+    "plugin:react/jsx-runtime",
 
-  
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
 
     "plugin:prettier/recommended",
     "prettier"
@@ -34,16 +43,29 @@
     "import/newline-after-import": ["warn", { "count": 1 }],
     "import/order": ["error", {"newlines-between": "always"}],
     "no-undef": "error",
-
-    "@typescript-eslint/no-unused-vars":  "off",
-  
-
-   
-    "react/react-in-jsx-scope":0,
-
+    "@typescript-eslint/no-unused-vars":"warn",
+    "@typescript-eslint/no-explicit-any":"warn",
+    "@typescript-eslint/no-misused-promises":"warn",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variable",
+        "format": ["camelCase", "UPPER_CASE",  "PascalCase"]
+      },
+      {
+        "selector": "function",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": "parameter",
+        "format": ["camelCase"],
+        "leadingUnderscore": "allow"
+      }
+    ],
     
     "react/jsx-props-no-spreading":0,
-
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/unbound-method": "off",
     "react/prop-types": [2, { "ignore": ["className"] }],
     "consistent-return": 0,
 
@@ -70,5 +92,5 @@
   },
 
 
-  "plugins": [  "prettier"]
+  "plugins": ["@typescript-eslint", "import", "react-hooks", "prettier"]
 }

@@ -1,4 +1,4 @@
-import { decodedToken } from '@/components/ui/jwt';
+import { decodedToken } from '@/services/jwt';
 import { authKey } from '@/constants/storageKey';
 import { getFromLS, setToLS } from '@/utils/localStorage';
 
@@ -12,4 +12,11 @@ export const getUserInfo = () => {
   }
 
   return '';
+};
+export const isLoggedIn = () => {
+  const authToken = getFromLS(authKey);
+  return !!authToken;
+};
+export const removeUserInfo = (key: string) => {
+  return localStorage.removeItem(key);
 };

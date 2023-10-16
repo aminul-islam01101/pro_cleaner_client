@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 import { ReactNode } from 'react';
 
 import BreadCrumbs from './BreadCrumbs';
+import Header from './Header';
 
 const { Content } = Layout;
 
@@ -16,6 +17,7 @@ const Contents = ({ children }: { children: ReactNode }) => {
         color: 'black',
       }}
     >
+      <Header />
       <BreadCrumbs
         items={[
           {

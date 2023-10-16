@@ -4,6 +4,9 @@ export const setToLS = (key: string, value: string) => {
   }
   localStorage.setItem(key, value);
 };
-export const getFromLS = (key:string) => {
-  return localStorage.getItem(key) 
+export const getFromLS = (key: string) => {
+  if (!key || typeof window === 'undefined') {
+    return '';
+  }
+  return localStorage.getItem(key);
 };
