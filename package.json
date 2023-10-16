@@ -10,9 +10,9 @@
 
     "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts,.tsx",
     "prettier:check": "prettier --ignore-path .gitignore --write \"src/app/**/*.+(js|ts|tsx|json)\"",
-    "lint:fix": "eslint . --fix",
+  
     "prettier:fix": "prettier --write \"src/app/**/*.+(js|ts|tsx|json)\"",
-    "lint-prettier-fix": "npm run lint:fix && npm run prettier:fix  && npm run lint",
+    "lint-prettier-fix": " npm run prettier:fix  && npm run lint",
     "lint-prettier-check": "npm run lint:check && npm run prettier:check",
     "lint-prettier": "npm run lint-prettier-fix && npm run lint-prettier-check",
     "lint-staged": "npm run  lint-prettier"
