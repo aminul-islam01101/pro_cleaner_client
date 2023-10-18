@@ -8,6 +8,8 @@ export const storeUserInfo = ({ accessToken }: { accessToken: string }) => {
 export const getUserInfo = () => {
   const authToken = getFromLS(authKey);
   if (authToken) {
+   
+   
     return decodedToken(authToken);
   }
 

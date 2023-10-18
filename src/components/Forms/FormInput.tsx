@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 /* eslint-disable react/require-default-props */
 
 'use client';
@@ -22,7 +22,9 @@ const FormInput = ({ name, type, size, value, id, placeholder, validation, label
 
   return (
     <>
-      {label || null}
+      <div   style={{
+               margin : '5px 0px',
+              }}>{label || null}</div>
       <Controller
         control={control}
         name={name}

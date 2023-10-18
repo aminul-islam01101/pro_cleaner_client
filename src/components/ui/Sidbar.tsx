@@ -15,7 +15,9 @@ type TRole = {
 
 const SideBar = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const { role } = getUserInfo() as any;
+  const { role, adminPermissions } = getUserInfo() as any;
+  console.log('🌼 🔥🔥 file: Sidbar.tsx:19 🔥🔥 SideBar 🔥🔥 adminPermission🌼', adminPermissions);
+
   // const role = ROLE.USER;
 
   return (
@@ -44,7 +46,7 @@ const SideBar = () => {
       >
         Pro-cleaner
       </div>
-      <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={sidebarItems(role)} />
+      <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={sidebarItems(role, adminPermissions)} />
     </Sider>
   );
 };
